@@ -1,6 +1,4 @@
-# Diffusion Bridge AutoEncoders for Unsupervised Representation Learning (DBAE) in ICLR 2025
-
-
+# [ICLR 2025] Diffusion Bridge AutoEncoders for Unsupervised Representation Learning (DBAE)
 # Dependencies
 
 Download all the packages described in setup.py
