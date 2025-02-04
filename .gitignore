@@ -25,8 +25,6 @@ wandb/
 pretrained/
 
 slurm*/
-*.png
-*.jpg
 
 *.ckpt
 
