@@ -1,4 +1,4 @@
-# Diffusion Bridge AutoEncoders for Unsupervised Representation Learning (DBAE) under review in Neurips2024
+# Diffusion Bridge AutoEncoders for Unsupervised Representation Learning (DBAE) in ICLR 2025
 
 
 # Dependencies
@@ -57,8 +57,4 @@ This code is heavily built upon the code from followings
 - https://github.com/phizaz/diffae
 - https://github.com/odegeasslbc/FastGAN-pytorch
 
-For evaluation we utilize the code from followings (we have plan to combine evaluation module to our own code and release)
-- Table1: https://github.com/yue-zhongqi/diti
-- Table2: https://github.com/phizaz/diffae
-- Table3: https://github.com/GaParmar/clean-fid / https://github.com/ericyeats/nashae-beamsynthesis
-- Table4: https://github.com/GaParmar/clean-fid / https://github.com/openai/guided-diffusion
+# Evalution
