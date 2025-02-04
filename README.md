@@ -5,7 +5,7 @@ Download all the packages described in setup.py
 ```
 pip install -e .
 ```
-
+![Teaser image](./assets/Figure5_11.PNG)
 # Datasets
 
 1. For FFHQ, CelebA, CelebA-HQ, and LSUN datasets (LMDB format) please follow instructions from https://github.com/phizaz/diffae.
