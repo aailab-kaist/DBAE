@@ -1,6 +1,3 @@
-
-
-
 BS=64
 
 
@@ -23,7 +20,7 @@ COND=concat
 
 
 if [[ $DATASET_NAME == "ffhq" ]]; then
-  DATA_DIR="xxx/data/ffhq"
+  DATA_DIR="/home/aailab/alsdudrla10/SecondArticle/DBAE/PDAE/data/ffhq" #"xxx/data/ffhq"
   DATASET=ffhq
   IMG_SIZE=128
   NUM_CH=128
@@ -33,7 +30,7 @@ if [[ $DATASET_NAME == "ffhq" ]]; then
   STO=True
   END=True
   ENDDATA=0.5
-  EXP="0.5_end_sto_k_latent_ffhq${IMG_SIZE}_${NUM_CH}_${LATENT}d"
+  EXP="ffhq${IMG_SIZE}_${NUM_CH}_${LATENT}d_${STO}"
 
 elif [[ $DATASET_NAME == "celeba" ]]; then
   DATA_DIR="xxx/data/ffhq"
@@ -46,7 +43,7 @@ elif [[ $DATASET_NAME == "celeba" ]]; then
   STO=False
   END=True
   ENDDATA=0.5
-  EXP="0.5_end_k_latent_celeba${IMG_SIZE}_${NUM_CH}_${LATENT}d"
+  EXP="celeba${IMG_SIZE}_${NUM_CH}_${LATENT}d_${STO}"
 
 elif [[ $DATASET_NAME == "bedroom" ]]; then
   DATA_DIR="xxx/data/bedroom256.lmdb"
@@ -59,7 +56,7 @@ elif [[ $DATASET_NAME == "bedroom" ]]; then
   STO=True
   END=True
   ENDDATA=0.5
-  EXP="0.5_end_k_latent_bedroom${IMG_SIZE}_${NUM_CH}_${LATENT}d"
+  EXP="bedroom${IMG_SIZE}_${NUM_CH}_${LATENT}d_${STO}"
 
 elif [[ $DATASET_NAME == "horse" ]]; then
   DATA_DIR="xxx/data/horse.lmdb"
@@ -72,7 +69,7 @@ elif [[ $DATASET_NAME == "horse" ]]; then
   STO=True
   END=True
   ENDDATA=0.5
-  EXP="0.5_end_k_latent_horse${IMG_SIZE}_${NUM_CH}_${LATENT}d"
+  EXP="horse${IMG_SIZE}_${NUM_CH}_${LATENT}d_${STO}"
 
 elif [[ $DATASET_NAME == "celebahq" ]]; then
   DATA_DIR="xxx/data/celebahq"
@@ -81,7 +78,7 @@ elif [[ $DATASET_NAME == "celebahq" ]]; then
   NUM_CH=128
   NUM_RES_BLOCKS=2
   LATENT=512
-  EXP="0.5_end_sto_k_latent_celeahq${IMG_SIZE}_${NUM_CH}_${LATENT}d"
+  EXP="celeahq${IMG_SIZE}_${NUM_CH}_${LATENT}d_${STO}"
   SAVE_ITER=10000
   STO=True
   END=True

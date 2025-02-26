@@ -6,10 +6,10 @@ CKPT=$3
 source ./args.sh $DATASET_NAME $PRED
 
 FREQ_SAVE_ITER=10000
-NGPU=2
+NGPU=4
 ATTN_TYPE="non_flash"
 
-CUDA_VISIBLE_DEVICES=0,1 mpiexec -n $NGPU --mca btl vader,self python3 dbae_train.py --exp=$EXP \
+CUDA_VISIBLE_DEVICES=0,1,2,3 mpiexec -n $NGPU --mca btl vader,self python3 dbae_train.py --exp=$EXP \
  --attention_resolutions $ATTN --class_cond False --use_scale_shift_norm True \
   --dropout 0.1 --ema_rate 0.9999 --batch_size $BS \
    --image_size $IMG_SIZE --lr 0.0001 --num_channels $NUM_CH --num_head_channels 64 --latent_dim=$LATENT --sto=$STO --end=$END --end_data=$ENDDATA \

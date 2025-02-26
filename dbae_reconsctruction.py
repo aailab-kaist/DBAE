@@ -136,6 +136,9 @@ def main():
         vutils.save_image(one_path.permute(0, 3, 1, 2)[:num_display].float(), f'{sample_dir}/x_T_sample_{i}.png',normalize=True, nrow=int(np.sqrt(num_display)))
         all_images.append(gathered_samples.detach().cpu().numpy())
 
+        np.savez(f"{sample_dir}/{dist.get_rank()}_real_sample_{i}.npz", samples=x0_image.numpy())
+        np.savez(f"{sample_dir}/{dist.get_rank()}_fake_sample_{i}.npz", samples=sample.to("cpu").numpy())
+
     logger.log(f"created {len(all_images) * args.batch_size * dist.get_world_size()} samples")
         
 
