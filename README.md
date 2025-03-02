@@ -18,7 +18,7 @@ In our experiment, we utilized CUDA 11.4 and PyTorch 1.12.
 2. Set your dataset path at args.sh.
 
 
-## Model training 
+## Model  training 
 
 We provide training bash file train_dbae.sh with dbae_train.py.
 Set variables `DATASET_NAME` and `SCHEDULE_TYPE`:
