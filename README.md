@@ -48,8 +48,8 @@ To to reconstruction, run
 
 ```
 bash recon_dbae.sh $DATASET_NAME $SCHEDULE_TYPE $MODEL_PATH $MODEL_PATH $CHURN_STEP_RATIO 1 train $RHO $GEN_SAMPLER $N
-bash recon_dbae.sh ffhq vp {Your_Path}/DBAE/workdir/0.5_end_sto_k_latent_ffhq128_128_512d_vp/ema_0.9999_1020000.pt 0.0 1 train 7 euler 20
-bash recon_dbae.sh ffhq vp {Your_Path}/DBAE/workdir/0.5_end_sto_k_latent_ffhq128_128_512d_vp/ema_0.9999_1020000.pt 0.33 1 train 7 heun 83
+bash recon_dbae.sh ffhq vp {Your_Path}/DBAE/workdir/0.5_end_sto_k_latent_ffhq128_128_512d_vp/ema_0.9999_1020000.pt 0.0 1 train 7 euler 100
+bash recon_dbae.sh ffhq vp {Your_Path}/DBAE/workdir/0.5_end_sto_k_latent_ffhq128_128_512d_vp/ema_0.9999_1020000.pt 0.33 1 train 7 heun 333
 ```
 
 ## Unconditional Generation
