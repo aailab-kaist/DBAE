@@ -14,16 +14,16 @@ In our experiment, we utilized CUDA 11.4 and PyTorch 1.12.
 
 ## Datasets
 
-1. For FFHQ, CelebA, CelebA-HQ, and LSUN datasets (LMDB format) please follow instructions from [DiffAE](https://github.com/phizaz/diffae).
+1. For FFHQ, CelebA, CelebA-HQ, and LSUN datasets (LMDB format), please follow instructions from [DiffAE](https://github.com/phizaz/diffae).
 2. Set your dataset path at args.sh.
 
 
 ## Model  training 
 
-We provide training bash file train_dbae.sh with dbae_train.py.
+We provide the training bash file train_dbae.sh with dbae_train.py.
 Set variables `DATASET_NAME` and `SCHEDULE_TYPE`:
-- `DATASET_NAME` sets dataset. We support FFHQ, CelebA, CelebA-HQ, and LSUNs.
-- `SCHEDULE_TYPE` sets forward diffusion. Set `ve` or `vp`. 
+- `DATASET_NAME` sets the dataset. We support FFHQ, CelebA, CelebA-HQ, and LSUN.
+- `SCHEDULE_TYPE` sets forward diffusion. Set `ve` or `vp. ' 
 
 To train, run
 
@@ -36,12 +36,12 @@ bash train_dbae.sh ffhq vp
 
 ## Reconstruction
 
-We provide reconstruction bash file recon_dbae.sh with dbae_reconstruction.py.
+We provide the reconstruction bash file recon_dbae.sh with dbae_reconstruction.py.
 Set variables `MODEL_PATH`, `CHURN_STEP_RATIO`, `RHO`, `GEN_SAMPLER`, and `N` :
 - `MODEL_PATH` sets your checkpoint path
 - `CHURN_STEP_RATIO` sets SDE(0~1) or ODE (0) sampling.
-- `RHO` sets time-discretization interval seletion.
-- `GEN_SAMPLER` sets order of sampler.
+- `RHO` sets time-discretization interval selection.
+- `GEN_SAMPLER` sets the order of the sampler.
 - `N` sets sampling step number.
 
 To to reconstruction, run
@@ -52,7 +52,7 @@ bash recon_dbae.sh ffhq vp {Your_Path}/DBAE/workdir/0.5_end_sto_k_latent_ffhq128
 bash recon_dbae.sh ffhq vp {Your_Path}/DBAE/workdir/0.5_end_sto_k_latent_ffhq128_128_512d_vp/ema_0.9999_1020000.pt 0.33 1 train 7 heun 83
 ```
 
-<!--## Disentanglment
+--## Disentanglment
 
 ## Unconditional Generation
 
@@ -60,7 +60,7 @@ bash recon_dbae.sh ffhq vp {Your_Path}/DBAE/workdir/0.5_end_sto_k_latent_ffhq128
 
 ## Attribute Manipulation
 
--->
+
 
 ## Reference
 If you find the code useful for your research, please consider citing
