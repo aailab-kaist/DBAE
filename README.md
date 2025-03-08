@@ -23,7 +23,7 @@ In our experiment, we utilized CUDA 11.4 and PyTorch 1.12.
 We provide the training bash file train_dbae.sh with dbae_train.py.
 Set variables `DATASET_NAME` and `SCHEDULE_TYPE`:
 - `DATASET_NAME` sets the dataset. We support FFHQ, CelebA, CelebA-HQ, and LSUN.
-- `SCHEDULE_TYPE` sets forward diffusion. Set `ve` or `vp. ' 
+- `SCHEDULE_TYPE` sets forward diffusion. Set `ve` or `vp`. 
 
 To train, run
 
