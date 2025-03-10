@@ -39,11 +39,11 @@ bash train_dbae.sh ffhq vp
 We provide the reconstruction bash file recon_dbae.sh with dbae_reconstruction.py.
 Set variables `MODEL_PATH`, `CHURN_STEP_RATIO`, `RHO`, `GEN_SAMPLER`, `N`, and `STO` :
 - `MODEL_PATH` sets your checkpoint path
-- `CHURN_STEP_RATIO` sets SDE(0~1) or ODE (0) sampling.
-- `RHO` sets time-discretization interval selection.
+- `CHURN_STEP_RATIO` sets SDE(0<, <1) or ODE (0) sampling. We recommend SDE to measure LPIPS and ODE for the other metrics.
+- `RHO` sets time-discretization interval selection. 
 - `GEN_SAMPLER` sets the order of the sampler.
 - `N` sets sampling step number.
-- `STO` sets true if using stochastic encoder.
+- `STO` is set to true if a stochastic encoder is used.
 
 To to reconstruction, run
 
