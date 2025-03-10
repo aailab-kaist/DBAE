@@ -47,6 +47,7 @@ To train, run
 ```
 bash train_dbae.sh $DATASET_NAME $SCHEDULE_TYPE
 bash train_dbae.sh ffhq vp
+bash train_dbae.sh celeba vp
 ```
 
 
