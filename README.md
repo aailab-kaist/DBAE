@@ -49,7 +49,6 @@ bash train_dbae.sh $DATASET_NAME $SCHEDULE_TYPE
 bash train_dbae.sh ffhq vp
 ```
 
-<!--## Downstream Inference -->
 
 ## (Eval) Downstream Inference
 
@@ -98,7 +97,7 @@ You can regenerate the results in Table 2 with [CheckPoints](https://drive.googl
 
 
 
-## Unconditional Generation
+<-- ## Unconditional Generation -->
 
 ## Interpolation
 <p align="center">
