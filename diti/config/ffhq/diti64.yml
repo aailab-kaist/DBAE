@@ -1,0 +1,68 @@
+train_dataset_config:
+  name: "FFHQ"
+  data_path: "../data/ffhq128"
+  image_size: 128
+  image_channel: 3
+  latent_dim: &latent_dim 512
+  split: "train"
+  augmentation: True
+  ssl_aug: "simclr"
+eval_dataset_config:
+  split: "eval"
+  augmentation: False
+
+diffusion_config:
+  timesteps: 1000
+  betas_type: "linear"
+  linear_beta_start: 0.0001
+  linear_beta_end: 0.02
+
+trained_ddpm_config: "../pre-trained-dpms/ffhq128/config.yml"
+trained_ddpm_checkpoint: "../pre-trained-dpms/ffhq128/checkpoint.pt"
+
+encoder_config:
+  model: "FFHQEncoder"
+  latent_dim: *latent_dim
+
+decoder_config:
+  model: "FFHQDecoder"
+  latent_dim: *latent_dim
+
+dataloader_config:
+  num_workers: 4
+  batch_size: 128
+
+optimizer_config:
+  lr: 1e-4
+  adam_betas: (0.9, 0.999)
+  adam_eps: 1e-8
+  weight_decay: 0.0
+  encoder_weight_decay: 1e-6  # only add to optimizer when (non-zero) SSL loss is being updated
+  enable_amp: False
+
+runner_config:
+  evaluate_every_steps: 5000
+  save_latest_every_steps: 1000
+  save_checkpoint_every_steps: 10000
+  num_iterations: 1
+  ema_every: 1
+  ema_decay: 0.9999
+  run_base_path: "../runs"
+  max_images: 64000000
+ssl_config:
+  k: 64
+  stages: 50,100,300,500,1000    # last number must be 1000. E.g., t1,t2 means 2 stages: 0->t1, t1->t2
+  dims_per_stage: 10,25,327,100,50     # length must = len(stages), sum must = latent_dim
+  ssl_weight: 0.0     # No SSL is used
+  ssl_start_step: 200000
+  encoder_opt_sgd: False
+  ssl_opt_sgd: True
+  ssl_method: "simclr"
+  ssl_batch_size: 512
+  simclr_temperature: 0.5
+  hidden_dim: 2048
+  bottleneck_dim: 128
+  out_dim: 128
+  lr: 1e-4
+  warmup_epochs: 5
+  num_epochs: 950     # 64M / 70K = 915 epochs; for lr scheduling
