@@ -64,6 +64,7 @@ python3 eval_reconstruction.py --sample_path={YOUR_PATH}/DBAE/ckpt/ffhq/det/samp
 python3 eval_reconstruction.py --sample_path={YOUR_PATH}/DBAE/ckpt/ffhq/sto/sample_1020000/euler_7.0_100_w=1.0_churn=0.0
 python3 eval_reconstruction.py --sample_path={YOUR_PATH}/DBAE/ckpt/ffhq/sto/sample_1020000/heun_7.0_333_w=1.0_churn=0.33
 ```
+You can regenerate the results in table 2 with checkpoints [Check Point](https://drive.google.com/drive/folders/1yuA3MJfIQUBF8U_f_l-8nKkUz6yzCeOO).
 
 ## Unconditional Generation
 
