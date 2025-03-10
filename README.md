@@ -111,9 +111,6 @@ You can regenerate the results in Table 2 with [CheckPoints](https://drive.googl
 </p>
 
 
-
-<-- ## Unconditional Generation -->
-
 ## Interpolation
 <p align="center">
   <img src="./assets/Figure_interpol.png" width="900">
