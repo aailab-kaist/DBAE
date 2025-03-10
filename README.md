@@ -52,7 +52,7 @@ bash train_dbae.sh ffhq vp
 
 <!--## Downstream Inference -->
 
-## Downstream Inference
+## (EVAL) Downstream Inference
 
 You can regenerate the results in Table 2 with [CheckPoints](https://drive.google.com/drive/folders/1yuA3MJfIQUBF8U_f_l-8nKkUz6yzCeOO).
 
@@ -61,7 +61,7 @@ You can regenerate the results in Table 2 with [CheckPoints](https://drive.googl
 </p>
 
 
-## Reconstruction
+## (EVAL) Reconstruction
 
 We provide the reconstruction bash file recon_dbae.sh with dbae_reconstruction.py.
 Set variables `MODEL_PATH`, `CHURN_STEP_RATIO`, `RHO`, `GEN_SAMPLER`, `N`, and `STO` :
