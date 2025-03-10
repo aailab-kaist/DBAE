@@ -51,6 +51,8 @@ bash train_dbae.sh ffhq vp
 
 
 ## (Eval) Downstream Inference
+We provide the downstream inference (regression/classification) bash files (infer_reg_dbae.sh/infer_class_dbae.sh) with scripts (dbae_infer_reg.py/dbae_infer_class.py)
+For regression, it needs to download [LFW datasets](https://drive.google.com/drive/folders/1jseAR1g1ckZxykS4OBpOTbPOjgsZSwrg). 
 
 You can regenerate the results in Table 1 with [CheckPoints](https://drive.google.com/drive/folders/1yuA3MJfIQUBF8U_f_l-8nKkUz6yzCeOO).
 
