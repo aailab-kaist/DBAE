@@ -73,7 +73,7 @@ bash infer_class_dbae.sh celeba vp {YOUR_PATH}/DBAE/ckpt/celeba/sto/ema_0.9999_9
 bash infer_class_dbae.sh celeba vp {YOUR_PATH}/DBAE/ckpt/celeba/det/ema_0.9999_1020000.pt false
 ```
 
-You can regenerate the results in Table 1 with [CheckPoints](https://drive.google.com/drive/folders/1yuA3MJfIQUBF8U_f_l-8nKkUz6yzCeOO).
+You can regenerate the results in Table 1 with [DBAT/ckpt](https://drive.google.com/drive/folders/1yuA3MJfIQUBF8U_f_l-8nKkUz6yzCeOO).
 
 <p align="center">
   <img src="./assets/Figure_inf.PNG" width="900">
@@ -110,7 +110,7 @@ python3 eval_reconstruction.py --sample_path={YOUR_PATH}/DBAE/ckpt/ffhq/det/samp
 python3 eval_reconstruction.py --sample_path={YOUR_PATH}/DBAE/ckpt/ffhq/sto/sample_1020000/euler_7.0_100_w=1.0_churn=0.0
 python3 eval_reconstruction.py --sample_path={YOUR_PATH}/DBAE/ckpt/ffhq/sto/sample_1020000/heun_7.0_333_w=1.0_churn=0.33
 ```
-You can regenerate the results in Table 2 with [CheckPoints](https://drive.google.com/drive/folders/1yuA3MJfIQUBF8U_f_l-8nKkUz6yzCeOO)/ckpt/ffhq.
+You can regenerate the results in Table 2 with [DBAT/ckpt/ffhq](https://drive.google.com/drive/folders/1T_2ke133cMniY0EEO9cn0gQRPiwuszUc).
 
 <p align="center">
   <img src="./assets/Figure_recon.PNG" width="900">
