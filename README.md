@@ -37,19 +37,20 @@ bash train_dbae.sh ffhq vp
 ## Reconstruction
 
 We provide the reconstruction bash file recon_dbae.sh with dbae_reconstruction.py.
-Set variables `MODEL_PATH`, `CHURN_STEP_RATIO`, `RHO`, `GEN_SAMPLER`, and `N` :
+Set variables `MODEL_PATH`, `CHURN_STEP_RATIO`, `RHO`, `GEN_SAMPLER`, `N`, and `STO` :
 - `MODEL_PATH` sets your checkpoint path
 - `CHURN_STEP_RATIO` sets SDE(0~1) or ODE (0) sampling.
 - `RHO` sets time-discretization interval selection.
 - `GEN_SAMPLER` sets the order of the sampler.
 - `N` sets sampling step number.
+- `STO` sets true if using stochastic encoder.
 
 To to reconstruction, run
 
 ```
-bash recon_dbae.sh $DATASET_NAME $SCHEDULE_TYPE $MODEL_PATH $MODEL_PATH $CHURN_STEP_RATIO 1 train $RHO $GEN_SAMPLER $N
-bash recon_dbae.sh ffhq vp {Your_Path}/DBAE/workdir/0.5_end_sto_k_latent_ffhq128_128_512d_vp/ema_0.9999_1020000.pt 0.0 1 train 7 euler 100
-bash recon_dbae.sh ffhq vp {Your_Path}/DBAE/workdir/0.5_end_sto_k_latent_ffhq128_128_512d_vp/ema_0.9999_1020000.pt 0.33 1 train 7 heun 333
+bash recon_dbae.sh $DATASET_NAME $SCHEDULE_TYPE $MODEL_PATH $MODEL_PATH $CHURN_STEP_RATIO 1 train $RHO $GEN_SAMPLER $N $STO
+bash recon_dbae.sh ffhq vp {Your_Path}/DBAE/workdir/0.5_end_sto_k_latent_ffhq128_128_512d_vp/ema_0.9999_1020000.pt 0.0 1 train 7 euler 100 false
+bash recon_dbae.sh ffhq vp {Your_Path}/DBAE/workdir/0.5_end_sto_k_latent_ffhq128_128_512d_vp/ema_0.9999_1020000.pt 0.33 1 train 7 heun 333 false
 ```
 
 ## Unconditional Generation
