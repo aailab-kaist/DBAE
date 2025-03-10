@@ -92,4 +92,5 @@ This work is heavily built upon the code from
 - *Zhou, L., Lou, A., Khanna, S., & Ermon, S. Denoising Diffusion Bridge Models. In The Twelfth International Conference on Learning Representations.*
 - *Preechakul, K., Chatthee, N., Wizadwongsa, S., & Suwajanakorn, S. (2022). Diffusion autoencoders: Toward a meaningful and decodable representation. In Proceedings of the IEEE/CVF conference on computer vision and pattern recognition (pp. 10619-10629).*
 - *Liu, B., Zhu, Y., Song, K., & Elgammal, A. (2020, October). Towards faster and stabilized gan training for high-fidelity few-shot image synthesis. In International conference on learning representations.*
+- *Yue, Z., Wang, J., Sun, Q., Ji, L., Eric, I., Chang, C., & Zhang, H. Exploring Diffusion Time-steps for Unsupervised Representation Learning. In The Twelfth International Conference on Learning Representations.*
 
