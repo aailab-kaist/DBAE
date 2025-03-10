@@ -102,8 +102,15 @@ You can regenerate the results in Table 2 with [CheckPoints](https://drive.googl
 ## Unconditional Generation
 
 ## Interpolation
+<p align="center">
+  <img src="./assets/Figure_interpol.png" width="900">
+</p>
+
 
 ## Attribute Manipulation
+<p align="center">
+  <img src="./assets/Figure_mani.png" width="900">
+</p>
 
 
 
