@@ -14,7 +14,6 @@ from math import exp
 def main():
     parser = argparse.ArgumentParser(description="Argument Parsing Example")
 
-    # 인자 추가
     parser.add_argument("--sample_path", type=str, help="SAMPLE_PATH")
     args = parser.parse_args()
 
