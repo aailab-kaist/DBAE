@@ -84,7 +84,6 @@ python3 eval_reconstruction.py --sample_path={YOUR_PATH}/DBAE/ckpt/ffhq/sto/samp
 ```
 You can regenerate the results in Table 2 with [CheckPoints](https://drive.google.com/drive/folders/1yuA3MJfIQUBF8U_f_l-8nKkUz6yzCeOO).
 
-![Reconstruction. Performance](./assets/Figure_recon.PNG)
 <p align="center">
 <img src="./assets/Figure_recon.PNG" alt="설명" width="900">
 </p>
