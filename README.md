@@ -14,7 +14,25 @@ In our experiment, we utilized CUDA 11.4 and PyTorch 1.12.
 
 ## Datasets
 
-1. For FFHQ, CelebA, CelebA-HQ, and LSUN datasets (LMDB format), please follow instructions from [DiffAE](https://github.com/phizaz/diffae).
+1. For FFHQ, CelebA, CelebA-HQ, and LSUN datasets (LMDB format), please follow instructions from [DiffAE](https://github.com/phizaz/diffae). The directory structure looks like:
+```
+data
+├─ffhq
+|  ├─data.mdb
+|  └lock.mdb
+├─celebahq
+|    ├─data.mdb
+|    └lock.mdb
+├─celeba
+|    ├─data.mdb
+|    └lock.mdb
+├─bedroom
+|    ├─data.mdb
+|    └lock.mdb
+├─horse
+|    ├─data.mdb
+|    └lock.mdb
+```
 2. Set your dataset path at args.sh.
 
 
