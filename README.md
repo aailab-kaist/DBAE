@@ -86,6 +86,8 @@ You can regenerate the results in Table 2 with [CheckPoints](https://drive.googl
 
 ![Reconstruction. Performance](./assets/Figure_recon.PNG)
 
+<img src="./assets/Figure_recon.PNG" alt="설명" width="500">
+
 
 
 ## Unconditional Generation
