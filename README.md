@@ -57,9 +57,11 @@ For regression, it needs to download [LFW datasets](https://drive.google.com/dri
 
 To evaluate regression capability (Pearson'r, MSE), run
 
-```
 (ffhq, DBAE)
+```
 bash infer_reg_dbae.sh ffhq vp {YOUR_PATH}/DBAE/ckpt/ffhq/sto/ema_0.9999_1020000.pt true
+```
+```
 (ffhq, DBAE-d)
 bash infer_reg_dbae.sh ffhq vp {YOUR_PATH}/DBAE/ckpt/ffhq/det/ema_0.9999_1020000.pt false
 bash infer_reg_dbae.sh celeba vp {YOUR_PATH}/DBAE/ckpt/celeba/sto/ema_0.9999_980000.pt true
