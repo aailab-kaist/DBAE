@@ -57,12 +57,14 @@ For regression, it needs to download [LFW datasets](https://drive.google.com/dri
 
 To evaluate regression capability (Pearson'r, MSE), run
 ```
-bash infer_reg_dbae.sh FFHQ vp /home/aailab/data2/alsdudrla10/SecondArticle/final_version/DBAE/ckpt/ffhq/sto/ema_0.9999_1020000.pt true
+bash infer_reg_dbae.sh FFHQ vp {YOUR_PATH}/DBAE/ckpt/ffhq/sto/ema_0.9999_1020000.pt true
+bash infer_reg_dbae.sh FFHQ vp {YOUR_PATH}/DBAE/ckpt/ffhq/det/ema_0.9999_1020000.pt false
 ```
 
 To evaluate classification capability (AP), run
 ```
-bash infer_class_dbae.sh FFHQ vp /home/aailab/data2/alsdudrla10/SecondArticle/final_version/DBAE/ckpt/ffhq/sto/ema_0.9999_1020000.pt true
+bash infer_class_dbae.sh FFHQ vp {YOUR_PATH}/DBAE/ckpt/ffhq/sto/ema_0.9999_1020000.pt true
+bash infer_class_dbae.sh FFHQ vp {YOUR_PATH}/DBAE/ckpt/ffhq/det/ema_0.9999_1020000.pt false
 ```
 
 You can regenerate the results in Table 1 with [CheckPoints](https://drive.google.com/drive/folders/1yuA3MJfIQUBF8U_f_l-8nKkUz6yzCeOO).
