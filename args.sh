@@ -27,20 +27,18 @@ if [[ $DATASET_NAME == "ffhq" ]]; then
   NUM_RES_BLOCKS=2
   LATENT=512
   SAVE_ITER=10000
-  STO=True
   END=True
   ENDDATA=0.5
   EXP="ffhq${IMG_SIZE}_${NUM_CH}_${LATENT}d_${STO}"
 
 elif [[ $DATASET_NAME == "celeba" ]]; then
-  DATA_DIR="xxx/data/ffhq"
+  DATA_DIR="xxx/data/celeba"
   DATASET=celeba
   IMG_SIZE=64
   NUM_CH=64
   NUM_RES_BLOCKS=2
   LATENT=512
   SAVE_ITER=10000
-  STO=False
   END=True
   ENDDATA=0.5
   EXP="celeba${IMG_SIZE}_${NUM_CH}_${LATENT}d_${STO}"
@@ -53,7 +51,6 @@ elif [[ $DATASET_NAME == "bedroom" ]]; then
   NUM_RES_BLOCKS=2
   LATENT=512
   SAVE_ITER=10000
-  STO=True
   END=True
   ENDDATA=0.5
   EXP="bedroom${IMG_SIZE}_${NUM_CH}_${LATENT}d_${STO}"
@@ -66,13 +63,12 @@ elif [[ $DATASET_NAME == "horse" ]]; then
   NUM_RES_BLOCKS=2
   LATENT=512
   SAVE_ITER=10000
-  STO=True
   END=True
   ENDDATA=0.5
   EXP="horse${IMG_SIZE}_${NUM_CH}_${LATENT}d_${STO}"
 
 elif [[ $DATASET_NAME == "celebahq" ]]; then
-  DATA_DIR="xxx/data/celebahq"
+  DATA_DIR="/home/aailab/alsdudrla10/SecondArticle/DBAE/PDAE/data/celebahq"
   DATASET=celebahq
   IMG_SIZE=128
   NUM_CH=128
@@ -80,7 +76,6 @@ elif [[ $DATASET_NAME == "celebahq" ]]; then
   LATENT=512
   EXP="celeahq${IMG_SIZE}_${NUM_CH}_${LATENT}d_${STO}"
   SAVE_ITER=10000
-  STO=True
   END=True
 fi
     

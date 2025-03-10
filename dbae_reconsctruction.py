@@ -136,6 +136,10 @@ def main():
         vutils.save_image(one_path.permute(0, 3, 1, 2)[:num_display].float(), f'{sample_dir}/x_T_sample_{i}.png',normalize=True, nrow=int(np.sqrt(num_display)))
         all_images.append(gathered_samples.detach().cpu().numpy())
 
+        x0_image = ((x0_image) * 255).clamp(0, 255).to(th.uint8)
+        x0_image = x0_image.permute(0, 2, 3, 1)
+        x0_image = x0_image.contiguous()
+
         np.savez(f"{sample_dir}/{dist.get_rank()}_real_sample_{i}.npz", samples=x0_image.numpy())
         np.savez(f"{sample_dir}/{dist.get_rank()}_fake_sample_{i}.npz", samples=sample.to("cpu").numpy())
 
@@ -155,7 +159,7 @@ def main():
 
 def create_argparser():
     defaults = dict(
-        data_dir="", ## only used in bridge
+        data_dir="",
         dataset='ffhq',
         clip_denoised=True,
         num_samples=10000,

@@ -7,6 +7,7 @@ SPLIT=$6
 RHO=$7
 GEN_SAMPLER=$8
 N=$9
+STO=${10}
 
 source ./args.sh $DATASET_NAME $PRED
 
