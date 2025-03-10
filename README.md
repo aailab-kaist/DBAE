@@ -6,8 +6,6 @@
 
 ![Teaser image](./assets/Figure1.png)
 
-![Teaser image](./assets/Figure3.PNG)
-
 ## Dependencies
 The requirements for this code are the same as [DDBM](https://github.com/alexzhou907/DDBM).
 
