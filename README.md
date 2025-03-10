@@ -118,12 +118,24 @@ You can regenerate the results in Table 2 with [CheckPoints](https://drive.googl
 
 
 ## Interpolation
+To reconstruction, run
+
+```
+bash interpol_dae.sh $DATASET_NAME $SCHEDULE_TYPE $MODEL_PATH $MODEL_PATH $CHURN_STEP_RATIO 1 train $RHO $GEN_SAMPLER $N $STO
+```
+
 <p align="center">
   <img src="./assets/Figure_interpol.png" width="900">
 </p>
 
 
 ## Attribute Manipulation
+To manipulate attributes, run
+
+```
+bash attr_mani_dae.sh $DATASET_NAME $SCHEDULE_TYPE $MODEL_PATH $MODEL_PATH $CHURN_STEP_RATIO 1 train $RHO $GEN_SAMPLER $N $STO
+```
+
 <p align="center">
   <img src="./assets/Figure_mani.png" width="900">
 </p>
