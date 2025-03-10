@@ -182,6 +182,7 @@ def create_argparser():
         stoxt=False,
     )
     defaults.update(model_and_diffusion_defaults())
+
     parser = argparse.ArgumentParser()
     add_dict_to_argparser(parser, defaults)
     return parser
