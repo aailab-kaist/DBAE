@@ -1,9 +1,9 @@
 DATASET_NAME=$1
 PRED=$2
-CKPT=$3
+STO=$3
+CKPT=$4
 
-
-source ./args.sh $DATASET_NAME $PRED
+source ./args.sh $DATASET_NAME $PRED $STO
 
 FREQ_SAVE_ITER=10000
 NGPU=4

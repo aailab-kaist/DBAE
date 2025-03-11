@@ -68,7 +68,6 @@ def main(args):
         
     if dist.get_rank() == 0:
         logger.log("creating data loader...")
-
     data, test_data = load_data(
         data_dir=args.data_dir,
         dataset=args.dataset,
