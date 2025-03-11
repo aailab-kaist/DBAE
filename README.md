@@ -121,7 +121,7 @@ You can regenerate the results in Table 2 with [DBAE/ckpt/ffhq](https://drive.go
 To reconstruction, run
 
 ```
-bash interpol_dae.sh $DATASET_NAME $SCHEDULE_TYPE $MODEL_PATH $MODEL_PATH $CHURN_STEP_RATIO 1 train $RHO $GEN_SAMPLER $N $STO
+bash interpol_dbae.sh celebahq vp {YOUR_PATH}/DBAE/ckpt/ffhq/sto/ema_0.9999_1020000.pt 0.33 1 train 7 heun 100 true
 ```
 
 <p align="center">
