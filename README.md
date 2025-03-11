@@ -40,14 +40,17 @@ data
 We provide the training bash file train_dbae.sh with dbae_train.py.
 Set variables `DATASET_NAME` and `SCHEDULE_TYPE`:
 - `DATASET_NAME` sets the dataset. We support FFHQ, CelebA, CelebA-HQ, and LSUN.
-- `SCHEDULE_TYPE` sets forward diffusion. Set `ve` or `vp`. 
+- `SCHEDULE_TYPE` sets forward diffusion. Set `ve` or `vp`.
+- `STO` sets encoder type. Set `true` or `false`. 
+
+We use 4 \times L40S GPUs for FFHQ and LSUN datasets and 4 \times RTX 3090 GPUs for celeba64.
 
 To train, run
 
 ```
-bash train_dbae.sh $DATASET_NAME $SCHEDULE_TYPE
-bash train_dbae.sh ffhq vp
-bash train_dbae.sh celeba vp
+bash train_dbae.sh $DATASET_NAME $SCHEDULE_TYPE $STO
+bash train_dbae.sh ffhq vp true
+bash train_dbae.sh celeba vp true
 ```
 
 
