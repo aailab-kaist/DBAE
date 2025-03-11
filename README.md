@@ -43,7 +43,7 @@ Set variables `DATASET_NAME` and `SCHEDULE_TYPE`:
 - `SCHEDULE_TYPE` sets forward diffusion. Set `ve` or `vp`.
 - `STO` sets encoder type. Set `true` or `false`. 
 
-We use 4 \times L40S GPUs for FFHQ and LSUN datasets and 4 \times RTX 3090 GPUs for celeba64.
+We use 4 * L40S GPUs for FFHQ and LSUN datasets and 4 * RTX 3090 GPUs for celeba64.
 
 To train, run
 
