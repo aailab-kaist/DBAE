@@ -75,7 +75,7 @@ def main():
     # constructing dataloaders
     celeba_train_config = {
         "name": "CELEBA64",
-        "data_path": "/home/aailab/alsdudrla10/SecondArticle/DBAE/PDAE/data/celeba.lmdb",
+        "data_path": "{YOUR_PATH}/data/celeba.lmdb",
         "image_size": size,
         "image_channel": 3,
         "latent_dim": 512,

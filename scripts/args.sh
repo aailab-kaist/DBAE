@@ -20,7 +20,7 @@ COND=concat
 
 
 if [[ $DATASET_NAME == "ffhq" ]]; then
-  DATA_DIR="/home/aailab/alsdudrla10/SecondArticle/DBAE/PDAE/data/ffhq" #"xxx/data/ffhq"
+  DATA_DIR= "{YOUR_PATH}/data/ffhq" #"/home/aailab/alsdudrla10/SecondArticle/DBAE/PDAE/data/ffhq"
   DATASET=ffhq
   IMG_SIZE=128
   NUM_CH=128
@@ -44,7 +44,7 @@ elif [[ $DATASET_NAME == "celeba" ]]; then
   EXP="celeba${IMG_SIZE}_${NUM_CH}_${LATENT}d_${STO}"
 
 elif [[ $DATASET_NAME == "bedroom" ]]; then
-  DATA_DIR="xxx/data/bedroom256.lmdb"
+  DATA_DIR="{YOUR_PATH}/data/bedroom256.lmdb"
   DATASET=bedroom
   IMG_SIZE=128
   NUM_CH=128
@@ -56,7 +56,7 @@ elif [[ $DATASET_NAME == "bedroom" ]]; then
   EXP="bedroom${IMG_SIZE}_${NUM_CH}_${LATENT}d_${STO}"
 
 elif [[ $DATASET_NAME == "horse" ]]; then
-  DATA_DIR="xxx/data/horse.lmdb"
+  DATA_DIR="{YOUR_PATH}/data/horse.lmdb"
   DATASET=horse
   IMG_SIZE=128
   NUM_CH=128
@@ -68,7 +68,7 @@ elif [[ $DATASET_NAME == "horse" ]]; then
   EXP="horse${IMG_SIZE}_${NUM_CH}_${LATENT}d_${STO}"
 
 elif [[ $DATASET_NAME == "celebahq" ]]; then
-  DATA_DIR="/home/aailab/alsdudrla10/SecondArticle/DBAE/PDAE/data/celebahq"
+  DATA_DIR="{YOUR_PATH}/data/celebahq" #"/home/aailab/alsdudrla10/SecondArticle/DBAE/PDAE/data/celebahq"
   DATASET=celebahq
   IMG_SIZE=128
   NUM_CH=128
