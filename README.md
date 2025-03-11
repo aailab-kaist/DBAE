@@ -121,7 +121,7 @@ You can regenerate the results in Table 2 with [DBAE/ckpt/ffhq](https://drive.go
 To interpolate two images, run
 
 ```
-bash interpol_dbae.sh celebahq vp {YOUR_PATH}/DBAE/ckpt/ffhq/sto/ema_0.9999_1020000.pt 0.33 1 train 7 heun 100 true
+bash interpol_dbae.sh celebahq vp {YOUR_PATH}/DBAE/ckpt/ffhq/sto/ema_0.9999_1020000.pt 0.33 1 train 7 heun 167 true
 ```
 
 <p align="center">
@@ -130,10 +130,16 @@ bash interpol_dbae.sh celebahq vp {YOUR_PATH}/DBAE/ckpt/ffhq/sto/ema_0.9999_1020
 
 
 ## Attribute Manipulation
+It needs the trained linear classifier on attributes (e.g., CelebAHQ).
+
+You can train your linear classifier with the infer_class_dbae.sh code. (The dataset could be changed.)
+
+We provide the trained linear classifier ([best.pt](https://drive.google.com/drive/folders/1c5idDNZeaiUcS-qc6_7zRxbHiOh-cry-)) for 
+
 To manipulate attributes, run
 
 ```
-bash attr_mani_dae.sh $DATASET_NAME $SCHEDULE_TYPE $MODEL_PATH $MODEL_PATH $CHURN_STEP_RATIO 1 train $RHO $GEN_SAMPLER $N $STO
+bash manipul_dbae.sh celebahq vp {YOUR_PATH}/ffhq/sto/ema_0.9999_1020000.pt 0.33 1 train 7 heun 167 true
 ```
 
 <p align="center">
