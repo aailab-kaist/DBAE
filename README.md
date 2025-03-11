@@ -118,7 +118,7 @@ You can regenerate the results in Table 2 with [DBAE/ckpt/ffhq](https://drive.go
 
 
 ## Interpolation
-To reconstruction, run
+To interpolate two images, run
 
 ```
 bash interpol_dbae.sh celebahq vp {YOUR_PATH}/DBAE/ckpt/ffhq/sto/ema_0.9999_1020000.pt 0.33 1 train 7 heun 100 true
